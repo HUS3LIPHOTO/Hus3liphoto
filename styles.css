@@ -187,7 +187,23 @@ h1 {
     text-align: center;
 
   }
+   /* Style for the search input */
+    #searchInput {
+      padding: 10px;
+      width: 60%;
+      border: 2px solid #ccc;
+      border-radius: 50px;
+      font-size: 25px;
+      background-color: #f8f8f8;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+  }
 
+  /* Style for the search input when focused */
+  #searchInput:focus {
+      outline: none;
+      border-color: #007bff;
+  }
 
 
 /* Web */

@@ -31,6 +31,7 @@
                 </div>
             <br /><br />
             <br />
+                    <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="بحث عن تغطية">
                           <!---------------------------------Item----------------------------------->
             <br />
             <br />
@@ -381,6 +382,33 @@
 
     </div>
     </main>
+
+    <script>
+        function changeColor() {
+            // Change the background color of the card when clicked
+            var card = document.getElementById("myCard");
+            card.style.backgroundColor = "#a0a0a0"; // New background color
+        }
+    </script>
+
+<a  href='http://www.freevisitorcounters.com'>Freevisitorcounters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7e8b8fcb02ba83cd820507f932afc02a5e4439d5'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1121001/t/5"></script>
+
+<script>
+    function searchCards() {
+        var input = document.getElementById("searchInput").value.toLowerCase();
+        var cards = document.getElementsByClassName("container");
+        for (var i = 0; i < cards.length; i++) {
+            var title = cards[i].querySelector("#Title_Main_2").textContent.toLowerCase();
+            if (title.indexOf(input) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 
     <script>
         function changeColor() {
